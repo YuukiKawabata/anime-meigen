@@ -1,0 +1,85 @@
+html {
+    font-size: 100%; /* 16px */
+    font-weight: 800;
+    height: auto;
+}
+
+body {
+    width: 95%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 20px;
+    font-size: 2rem;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.3rem;
+    margin: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+button {
+    width: 95%;
+    margin: 20px;
+    background-color: rgb(243, 101, 122);
+    text-align: center;
+    color: aliceblue;
+    border: 2px solid #24292e;
+}
+
+.site-title {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.site-title a {
+    color: #24292e;
+}
+
+
+/* header */
+#header {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 10px;
+    height: auto;
+    font-family: "Nikukyu";
+}
+
+#header ul {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+#header li {
+    font-size: 1.1rem;
+    margin-left: 30px;
+}
+
+#header ul li a {
+    color: #24292e;
+    transition: all 0.3s;
+}
+
+#header ul li a:hover {
+    opacity: 0.5;
+}

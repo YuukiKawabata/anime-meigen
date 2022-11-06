@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="いろいろなアニメの名言を見ることが出来ます。タイトルやキャラクターを入力するとそれに合わせた名言が表示されます。">
+    <!-- reset.css ress -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
+
+    <title>アニメノメイゲン</title>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <h1 class="site-title">
+            <a href="#">アニメのめいげん</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#about">つかいかた</a></li>
+                <li><a href="#contact">れんらく</a></li>
+                <li><a href="https://www.Twitter.com" target="_blank" 
+                    rel="noopener noreferrer"><img src="" alt="ついったー"></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <button onclick="fetchUserInfo();">名言を取得</button>
+
+    <main>
+        <div id="result"></div>
+    </main>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
