@@ -17,6 +17,8 @@
         <h1 class="site-title">
             <a href="#">アニメのめいげん</a>
         </h1>
+
+     
         <nav>
             <ul>
                 <li><a href="#about">つかいかた</a></li>
@@ -26,11 +28,34 @@
             </ul>
         </nav>
     </header>
-    
-    <button onclick="fetchUserInfo();">ランダムで名言を取得</button>
 
+    <div class="get-quotes">
+
+        <div class="get-quote-randam">
+            <label>ランダムで検索</label>
+            <button onclick="GetAnimeRandom();">検索</button>
+        </div>
+
+        <div class="get-quote-title">
+            <label>タイトルで検索
+                <input type="text" id="search-word-title" placeholder="タイトルを入力">
+            </label>
+            <button onclick="GetAnimeTitle();">検索</button>
+        </div>  
+
+        <div class="get-quote-name">
+            <label>キャラクターで検索
+                <input type="text" id="search-word-name" placeholder="キャラクターを入力">
+            </label>
+            <button onclick="GetAnimeName();">検索</button>
+        </div>  
+
+    </div>
+   
     <main>
-        <div id="result"></div>
+        <div id="random"></div>
+        <div id="title"></div>
+        <div id="name"></div>
     </main>
 
     <script type="text/javascript" src="main.js"></script>

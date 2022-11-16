@@ -7,11 +7,12 @@ html {
 body {
     width: 95%;
     margin: 0 auto;
+    background-color: lightgray;
 }
 
 h2 {
     margin: 20px;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 
@@ -33,14 +34,32 @@ li {
     font-size: 1.2rem;
 }
 
+label { 
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 button {
-    width: 95%;
-    margin: 20px;
-    background-color: rgb(243, 101, 122);
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(248, 155, 169);
     text-align: center;
     color: aliceblue;
     border: 2px solid #24292e;
+    border-radius: 15px;
 }
+
+input {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: aliceblue;
+    border: 2px solid #24292e;
+    color: black;
+    border-radius: 15px;
+}
+
 
 .site-title {
     font-weight: 600;
@@ -54,11 +73,11 @@ button {
 
 /* header */
 #header {
-    width: 95%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px auto;
+    margin: 1rem auto;
     padding: 10px;
     height: auto;
     font-family: "Nikukyu";
@@ -83,3 +102,34 @@ button {
 #header ul li a:hover {
     opacity: 0.5;
 }
+
+.get-quotes {
+    display: grid;
+;
+}
+
+.get-quote-randam {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin: 1.5rem;
+}
+
+.get-quote-title {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin: 1.5rem;
+}
+
+.get-quote-name {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin: 1.5rem;
+}
+
+
+

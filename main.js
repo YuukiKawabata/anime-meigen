@@ -1,57 +1,63 @@
-// let meigenData = {};
+const baseUrl = "https://animechan.vercel.app/api/random";
 
-// meigenData = fetch("https://animechan.vercel.app/api/random")
-//     .then((response) => response.json())
-//     .then((quote) => console.log(quote));
+const searchWordTitle = document.querySelector("#search-word-title"); 
+const searchWordName = document.querySelector("#search-word-name");
+const random = document.getElementById("random");
+const title = document.getElementById("title"); 
+const name = document.getElementById("name");
 
 
-
-
-function fetchUserInfo() {
-    fetch(`https://animechan.vercel.app/api/random`)
-        .then(response => {
-            if (!response.ok) {
-                console.error("エラーレスポンス", response);
-            } else {
-                return response.json().then(userInfo => {
-                    // HTMLの組み立て
-                    const view = escapeHTML
-                    `
-
-                    <h2>${userInfo.anime}</h2>
-                    <div>
-                    <p>${userInfo.character}</p>
-                    </div>
-                    <div>
-                    <p>${userInfo.quote}</p>
-                    </div>
-                    `;
-                    // HTMLの挿入
-                    const result = document.getElementById("result");
-                    result.innerHTML = view;
-                });
-            }
-        }).catch(error => {
-            console.error(error);
-        });
+function GetAnimeRandom() {
+    fetch("https://animechan.vercel.app/api/random")
+          .then((response) => response.json())
+          .then((getAnime) => {
+            const randomView = 
+            `
+            <h2>タイトル <br>
+            ${getAnime.anime}</h2>
+            <p >キャラクター<br>
+            ${getAnime.character}</p>
+            <p>名言<br>
+            ${getAnime.quote}</p>
+            `;
+            // HTMLの挿入
+            random.innerHTML = randomView;
+            })
 }
 
-function escapeSpecialChars(str) {
-    return str
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+function GetAnimeTitle () {
+    fetch(baseUrl + "/anime?title=" + searchWordTitle.value)
+        .then((response) => response.json())
+        .then((getAnime) => {
+            const titleView = 
+            `
+            <h2>タイトル <br>
+            ${getAnime.anime}</h2>
+            <p >キャラクター<br>
+            ${getAnime.character}</p>
+            <p>名言<br>
+            ${getAnime.quote}</p>
+            `;
+            // HTMLの挿入
+            title.innerHTML = titleView;
+        })
 }
 
-function escapeHTML(strings, ...values) {
-    return strings.reduce((result, str, i) => {
-        const value = values[i - 1];
-        if (typeof value === "string") {
-            return result + escapeSpecialChars(value) + str;
-        } else {
-            return result + String(value) + str;
-        }
-    });
+
+function GetAnimeName () {
+    fetch(baseUrl + "/character?name=" + searchWordName.value)
+        .then((response) => response.json())
+        .then((getAnime) => {
+            const nameView = 
+            `
+            <h2>タイトル <br>
+            ${getAnime.anime}</h2>
+            <p >キャラクター<br>
+            ${getAnime.character}</p>
+            <p>名言<br>
+            ${getAnime.quote}</p>
+            `;
+            // HTMLの挿入
+            name.innerHTML = nameView;
+        })
 }
